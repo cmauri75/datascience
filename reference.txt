@@ -1,0 +1,36 @@
+#REfernence file
+x <- 3  
+x             #stampa il valore, potevo usare esplicito print(x)
+
+#ritrno [1] 3 significa che x è un vettore e stai vedendo il primo elemento: 5
+
+msg <- "hello"
+
+x <- 1:100 #crea un array di 100 elementi, il printout mostr l'indice solo quando va a capo, no comment
+
+# i dati primitivi sono tutti oggetti, character, numeric (real), integer, complex, logical (boolean)
+#l'oggetto base è un Vector di oggetti dello stesso tipo
+# tutti tranne l'oggetto list che è un vector di oggetti misti
+#il vector vuoto lo ottieni con vector(), a logica credo sia l'equivalente di null.
+
+1L #è un integer esplicitato, senò è un double
+Inf #è infinito, puoi usarlo normalmente
+NaN #rappresenta un missing value
+
+length(x) #da la dimensione del vector
+
+# i vector si creano col metodo c() o con : o con vector (per quelli vuoti) o list (se voglio mischiare)
+x <- c(0,1,2) #numeric
+y <- 1:10     #integer
+z <- vector("numeric",10)
+
+#se mischio i tipi in c() lui trova un tipo che va bene per tutti
+#per forzare il tipo uso as.tipo(x)
+as.logical(x)
+as.character(x)
+
+l <- list (1,"a", TRUE) #crea list di vector, lo capisci quando stampi
+
+m <- matrix (nrow=2, ncol=3) #crea una matrice vuota
+#ci accedi 1 based per riga, colonna
+#se voglio prevalorizzare metto 1:6 prima di nrow
